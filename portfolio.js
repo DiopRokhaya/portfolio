@@ -137,45 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Form validation and submission
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const subject = formData.get('subject');
-            const message = formData.get('message');
-            
-            // Basic validation
-            if (!name || !email || !subject || !message) {
-                showNotification('Veuillez remplir tous les champs', 'error');
-                return;
-            }
-            
-            if (!isValidEmail(email)) {
-                showNotification('Veuillez entrer une adresse email valide', 'error');
-                return;
-            }
-            
-            // Simulate form submission
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Envoi en cours...';
-            submitBtn.disabled = true;
-            
-            setTimeout(() => {
-                showNotification('Message envoyé avec succès ! Je vous répondrai dès que possible.', 'success');
-                this.reset();
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            }, 2000);
-        });
-    }
-
+    
     // Email validation helper
     function isValidEmail(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

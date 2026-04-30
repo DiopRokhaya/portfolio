@@ -310,12 +310,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialiser toutes les barres de progression à 0%
     const allSkillBars = document.querySelectorAll('.skill-progress');
-    allSkillBars.forEach(bar => {
+    console.log('Barres trouvées:', allSkillBars.length);
+    
+    allSkillBars.forEach((bar, index) => {
         bar.style.width = '0%';
+        const progress = bar.getAttribute('data-progress');
+        console.log(`Barre ${index}: ${progress}%`);
     });
 
     // Animation des barres de progression des compétences
-    const observerOptions = {
+    const skillObserverOptions = {
         threshold: 0.3,
         rootMargin: '0px 0px -100px 0px'
     };
@@ -323,21 +327,30 @@ document.addEventListener('DOMContentLoaded', function() {
     const skillObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                console.log('Section compétences visible!');
                 const skillBars = entry.target.querySelectorAll('.skill-progress');
+                console.log('Barres dans la section:', skillBars.length);
+                
                 skillBars.forEach((bar, index) => {
                     const progress = bar.getAttribute('data-progress');
+                    console.log(`Animation barre ${index}: ${progress}%`);
+                    
                     setTimeout(() => {
                         bar.style.width = progress + '%';
+                        console.log(`Barre ${index} animée à ${progress}%`);
                     }, index * 100);
                 });
                 skillObserver.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, skillObserverOptions);
 
     const skillsSection = document.querySelector('#competences');
     if (skillsSection) {
+        console.log('Section compétences trouvée, observation activée');
         skillObserver.observe(skillsSection);
+    } else {
+        console.log('Section compétences NON trouvée!');
     }
 
     console.log('Portfolio chargé avec succès !');

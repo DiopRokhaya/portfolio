@@ -308,6 +308,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Initialiser toutes les barres de progression à 0%
+    const allSkillBars = document.querySelectorAll('.skill-progress');
+    allSkillBars.forEach(bar => {
+        bar.style.width = '0%';
+    });
+
     // Animation des barres de progression des compétences
     const observerOptions = {
         threshold: 0.3,

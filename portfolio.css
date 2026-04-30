@@ -1317,8 +1317,7 @@ p {
 /* Projets Académiques - Nouveau Design */
 .academic-projects-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -1326,7 +1325,7 @@ p {
 .project-category {
     background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
     border-radius: 20px;
-    padding: 25px;
+    padding: 30px;
     box-shadow: 0 8px 32px rgba(212, 165, 165, 0.08);
     border: 1px solid rgba(212, 165, 165, 0.1);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1427,13 +1426,12 @@ p {
 /* Responsive pour Projets Académiques */
 @media (max-width: 768px) {
     .academic-projects-container {
-        grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 30px;
         padding: 0 20px;
     }
     
     .project-category {
-        padding: 20px 15px;
+        padding: 25px 20px;
     }
     
     .category-header {
@@ -1466,26 +1464,21 @@ p {
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .academic-projects-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-        padding: 0 25px;
+        gap: 35px;
+        padding: 0 30px;
     }
     
     .project-category {
-        padding: 20px 18px;
+        padding: 28px 25px;
     }
     
     .academic-project {
-        padding: 15px;
+        padding: 18px;
     }
     
     .project-number {
-        min-width: 45px;
-        font-size: 1.6rem;
-    }
-    
-    .category-header h3 {
-        font-size: 1.2rem;
+        min-width: 50px;
+        font-size: 1.8rem;
     }
 }
 

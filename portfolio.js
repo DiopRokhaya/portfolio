@@ -308,5 +308,31 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Animation des barres de progression des compétences
+    const observerOptions = {
+        threshold: 0.3,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const skillObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const skillBars = entry.target.querySelectorAll('.skill-progress');
+                skillBars.forEach((bar, index) => {
+                    const progress = bar.getAttribute('data-progress');
+                    setTimeout(() => {
+                        bar.style.width = progress + '%';
+                    }, index * 100);
+                });
+                skillObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    const skillsSection = document.querySelector('#competences');
+    if (skillsSection) {
+        skillObserver.observe(skillsSection);
+    }
+
     console.log('Portfolio chargé avec succès !');
 });

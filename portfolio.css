@@ -1100,7 +1100,43 @@ p {
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
 }
 
-/* Responsive */
+/* Responsive Mobile First */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .nav-container {
+        padding: 0 15px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.3rem;
+    }
+    
+    .btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-menu {
         position: fixed;
@@ -1147,11 +1183,6 @@ p {
 
     .hero-social {
         justify-content: center;
-    }
-
-    .profile-img {
-        width: 250px;
-        height: 250px;
     }
 
     .timeline {
@@ -1462,7 +1493,101 @@ p {
     }
 }
 
+/* Responsive Tablette */
 @media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 0 30px;
+    }
+    
+    .hero-content {
+        gap: 40px;
+        padding: 0 30px;
+    }
+    
+    .hero-text h1 {
+        font-size: 3.5rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.6rem;
+    }
+    
+    .profile-img {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 0 30px;
+    }
+    
+    .skill-category {
+        padding: 28px 25px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 0 30px;
+    }
+    
+    .project-image {
+        height: 190px;
+    }
+    
+    .project-content {
+        padding: 20px;
+    }
+    
+    .project-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .project-content p {
+        font-size: 0.95rem;
+    }
+    
+    .timeline {
+        padding: 0 30px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.4rem;
+    }
+    
+    .timeline-content p {
+        font-size: 1rem;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        max-width: 800px;
+    }
+    
+    .contact-form {
+        padding: 35px 30px;
+    }
+    
+    .contact-info h3 {
+        font-size: 1.4rem;
+    }
+    
+    .contact-info p {
+        font-size: 1rem;
+    }
+    
+    /* Projets Académiques tablette */
     .academic-projects-container {
         gap: 35px;
         padding: 0 30px;
@@ -1479,6 +1604,260 @@ p {
     .project-number {
         min-width: 50px;
         font-size: 1.8rem;
+    }
+    
+    .category-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .project-details h4 {
+        font-size: 1.1rem;
+    }
+    
+    .project-details p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsive Desktop */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .container {
+        padding: 0 40px;
+    }
+    
+    .hero-content {
+        gap: 60px;
+        padding: 0 40px;
+    }
+    
+    .hero-text h1 {
+        font-size: 4rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.8rem;
+    }
+    
+    .profile-img {
+        width: 320px;
+        height: 320px;
+    }
+    
+    .section-title {
+        font-size: 2.8rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        padding: 0 40px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        padding: 0 40px;
+    }
+    
+    .project-image {
+        height: 220px;
+    }
+    
+    .project-content {
+        padding: 30px;
+    }
+    
+    .project-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .project-content p {
+        font-size: 1rem;
+    }
+    
+    .timeline {
+        padding: 0 40px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .timeline-content p {
+        font-size: 1.1rem;
+    }
+    
+    .contact-content {
+        gap: 70px;
+        max-width: 1100px;
+    }
+    
+    .contact-form {
+        padding: 45px;
+    }
+    
+    .contact-info h3 {
+        font-size: 1.6rem;
+    }
+    
+    .contact-info p {
+        font-size: 1.1rem;
+    }
+    
+    /* Projets Académiques desktop */
+    .academic-projects-container {
+        gap: 40px;
+        padding: 0 40px;
+    }
+    
+    .project-category {
+        padding: 35px 30px;
+    }
+    
+    .academic-project {
+        padding: 25px;
+    }
+    
+    .project-number {
+        min-width: 60px;
+        font-size: 2rem;
+    }
+    
+    .category-header h3 {
+        font-size: 1.4rem;
+    }
+    
+    .project-details h4 {
+        font-size: 1.3rem;
+    }
+    
+    .project-details p {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive Large Desktop */
+@media (min-width: 1441px) {
+    .container {
+        padding: 0 60px;
+    }
+    
+    .hero-content {
+        gap: 80px;
+        padding: 0 60px;
+    }
+    
+    .hero-text h1 {
+        font-size: 4.5rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+    
+    .profile-img {
+        width: 380px;
+        height: 380px;
+    }
+    
+    .section-title {
+        font-size: 3.2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        padding: 0 60px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        padding: 0 60px;
+    }
+    
+    .project-image {
+        height: 240px;
+    }
+    
+    .project-content {
+        padding: 35px;
+    }
+    
+    .project-content h3 {
+        font-size: 1.6rem;
+    }
+    
+    .project-content p {
+        font-size: 1.1rem;
+    }
+    
+    .timeline {
+        padding: 0 60px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.6rem;
+    }
+    
+    .timeline-content p {
+        font-size: 1.2rem;
+    }
+    
+    .contact-content {
+        gap: 80px;
+        max-width: 1400px;
+    }
+    
+    .contact-form {
+        padding: 50px;
+    }
+    
+    .contact-info h3 {
+        font-size: 1.8rem;
+    }
+    
+    .contact-info p {
+        font-size: 1.2rem;
+    }
+    
+    /* Projets Académiques large desktop */
+    .academic-projects-container {
+        gap: 50px;
+        padding: 0 60px;
+    }
+    
+    .project-category {
+        padding: 40px 35px;
+    }
+    
+    .academic-project {
+        padding: 30px;
+    }
+    
+    .project-number {
+        min-width: 70px;
+        font-size: 2.2rem;
+    }
+    
+    .category-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .project-details h4 {
+        font-size: 1.4rem;
+    }
+    
+    .project-details p {
+        font-size: 1.1rem;
     }
 }
 

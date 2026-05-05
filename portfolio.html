@@ -67,6 +67,45 @@
             }
         }
     </style>
+    <script>
+        // Forcer les grilles correctes pour contourner le cache
+        document.addEventListener('DOMContentLoaded', function() {
+            const skillsGrid = document.querySelector('.skills-grid');
+            if (skillsGrid) {
+                function updateSkillsGrid() {
+                    const width = window.innerWidth;
+                    
+                    // Mobile - 1 colonne
+                    if (width <= 768) {
+                        skillsGrid.style.gridTemplateColumns = '1fr';
+                        skillsGrid.style.gap = '30px';
+                        skillsGrid.style.padding = '0 20px';
+                    }
+                    // iPhone XR spécifique - 1 colonne
+                    else if (width === 414 && window.innerHeight === 896) {
+                        skillsGrid.style.gridTemplateColumns = '1fr';
+                        skillsGrid.style.gap = '25px';
+                        skillsGrid.style.padding = '0 20px';
+                    }
+                    // Tablette - 2 colonnes
+                    else if (width >= 769 && width <= 1024) {
+                        skillsGrid.style.gridTemplateColumns = 'repeat(2, 1fr)';
+                        skillsGrid.style.gap = '35px';
+                        skillsGrid.style.padding = '0 30px';
+                    }
+                    // Desktop - 2 colonnes
+                    else if (width > 1024) {
+                        skillsGrid.style.gridTemplateColumns = 'repeat(2, 1fr)';
+                        skillsGrid.style.gap = '40px';
+                        skillsGrid.style.padding = '0';
+                    }
+                }
+                
+                updateSkillsGrid();
+                window.addEventListener('resize', updateSkillsGrid);
+            }
+        });
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500&family=Georgia&display=swap" rel="stylesheet">

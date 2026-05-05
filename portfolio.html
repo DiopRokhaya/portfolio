@@ -52,9 +52,37 @@
                 padding: 0 20px !important;
             }
             
+            /* PHOTO MOBILE - FORCÉE */
             .profile-img {
                 width: 200px !important;
                 height: 200px !important;
+                border-radius: 50% !important;
+                overflow: hidden !important;
+                border: 8px solid rgba(255, 251, 250, 0.9) !important;
+                box-shadow: 
+                    0 20px 40px rgba(200, 149, 149, 0.2),
+                    0 0 0 1px rgba(255, 251, 250, 0.6) !important;
+                position: relative !important;
+                transition: all 0.4s ease !important;
+                background: transparent !important;
+                z-index: 1000 !important;
+            }
+            
+            .profile-img img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                border-radius: 50% !important;
+            }
+            
+            .hero-image {
+                width: 200px !important;
+                height: 200px !important;
+                margin: 0 auto !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                background: transparent !important;
             }
             
             /* SUPPRESSION DU FOND BLANC */

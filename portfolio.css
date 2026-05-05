@@ -402,6 +402,46 @@ p {
     z-index: 0;
 }
 
+/* Responsive pour la photo et son cercle */
+@media (max-width: 768px) {
+    .profile-img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .profile-img::before {
+        width: 270px;
+        height: 270px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .profile-img::before {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+@media only screen 
+and (device-width: 414px) 
+and (device-height: 896px) 
+and (-webkit-device-pixel-ratio: 2) {
+    .profile-img {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .profile-img::before {
+        width: 240px;
+        height: 240px;
+    }
+}
+
 .profile-img {
     width: 300px;
     height: 300px;
@@ -415,6 +455,16 @@ p {
     transition: all 0.4s ease;
     background: white;
     z-index: 1;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .profile-img::before {

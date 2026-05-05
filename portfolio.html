@@ -32,6 +32,41 @@
     
     <link rel="stylesheet" href="portfolio-new.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Styles critiques pour contourner le cache */
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr !important;
+                gap: 30px !important;
+                padding: 0 20px !important;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 35px !important;
+                padding: 0 30px !important;
+            }
+        }
+        
+        @media (min-width: 1025px) {
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 40px !important;
+            }
+        }
+        
+        @media only screen 
+        and (device-width: 414px) 
+        and (device-height: 896px) 
+        and (-webkit-device-pixel-ratio: 2) {
+            .skills-grid {
+                grid-template-columns: 1fr !important;
+                gap: 25px !important;
+            }
+        }
+    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500&family=Georgia&display=swap" rel="stylesheet">

@@ -44,12 +44,39 @@
             margin: 0 auto !important;
         }
         
-        /* Mobile - 1 colonne FORCÉ */
+        /* Mobile - STYLES AMÉLIORÉS */
         @media (max-width: 768px) {
             .skills-grid {
                 grid-template-columns: 1fr !important;
                 gap: 30px !important;
                 padding: 0 20px !important;
+            }
+            
+            .container {
+                padding: 15px !important;
+            }
+            
+            .hero {
+                padding: 40px 0 !important;
+            }
+            
+            .hero-content {
+                gap: 30px !important;
+            }
+            
+            .hero-text h1 {
+                font-size: 2rem !important;
+                margin-bottom: 8px !important;
+            }
+            
+            .hero-text h2 {
+                font-size: 1.2rem !important;
+                margin-bottom: 15px !important;
+            }
+            
+            .hero-description {
+                font-size: 0.95rem !important;
+                line-height: 1.6 !important;
             }
             
             /* PHOTO MOBILE - FORCÉE */
@@ -58,7 +85,7 @@
                 height: 200px !important;
                 border-radius: 50% !important;
                 overflow: hidden !important;
-                border: 8px solid rgba(255, 251, 250, 0.9) !important;
+                border: 6px solid rgba(255, 251, 250, 0.9) !important;
                 box-shadow: 
                     0 20px 40px rgba(200, 149, 149, 0.2),
                     0 0 0 1px rgba(255, 251, 250, 0.6) !important;
@@ -85,9 +112,171 @@
                 background: transparent !important;
             }
             
+            .section-title {
+                font-size: 2rem !important;
+                margin-bottom: 40px !important;
+            }
+            
+            .skill-category {
+                padding: 25px !important;
+                border-radius: 15px !important;
+            }
+            
+            .skill-header h3 {
+                font-size: 1.2rem !important;
+                margin-bottom: 15px !important;
+            }
+            
+            .skill-item span {
+                min-width: 100px !important;
+                font-size: 0.9rem !important;
+            }
+            
             /* SUPPRESSION DU FOND BLANC */
             .profile-img::before {
                 display: none !important;
+            }
+        }
+        
+        /* Petits mobiles */
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 1.8rem !important;
+            }
+            
+            .hero-text h2 {
+                font-size: 1.1rem !important;
+            }
+            
+            .hero-description {
+                font-size: 0.9rem !important;
+            }
+            
+            .profile-img {
+                width: 180px !important;
+                height: 180px !important;
+                border-width: 5px !important;
+            }
+            
+            .hero-image {
+                width: 180px !important;
+                height: 180px !important;
+            }
+            
+            .section-title {
+                font-size: 1.8rem !important;
+            }
+            
+            .skill-category {
+                padding: 20px !important;
+            }
+            
+            .skill-item span {
+                min-width: 90px !important;
+                font-size: 0.85rem !important;
+            }
+            
+            .skills-grid {
+                gap: 25px !important;
+                padding: 0 15px !important;
+            }
+        }
+        
+        /* iPhone XR - STYLES SPÉCIFIQUES */
+        @media only screen 
+        and (device-width: 414px) 
+        and (device-height: 896px) 
+        and (-webkit-device-pixel-ratio: 2) {
+            .profile-img {
+                width: 220px !important;
+                height: 220px !important;
+                border-width: 7px !important;
+            }
+            
+            .hero-image {
+                width: 220px !important;
+                height: 220px !important;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.2rem !important;
+            }
+            
+            .hero-text h2 {
+                font-size: 1.3rem !important;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr !important;
+                gap: 25px !important;
+                padding: 0 20px !important;
+            }
+        }
+        
+        /* Tablette - STYLES SPÉCIFIQUES */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .container {
+                padding: 25px !important;
+            }
+            
+            .hero {
+                padding: 50px 0 !important;
+            }
+            
+            .hero-content {
+                gap: 50px !important;
+            }
+            
+            .profile-img {
+                width: 280px !important;
+                height: 280px !important;
+                border-width: 7px !important;
+            }
+            
+            .hero-image {
+                width: 280px !important;
+                height: 280px !important;
+            }
+            
+            .skills-grid {
+                gap: 35px !important;
+                max-width: 900px !important;
+            }
+            
+            .skill-category {
+                padding: 28px !important;
+            }
+        }
+        
+        /* Grand écran - STYLES SPÉCIFIQUES */
+        @media (min-width: 1400px) {
+            .container {
+                max-width: 1400px !important;
+                padding: 30px !important;
+            }
+            
+            .hero {
+                padding: 80px 0 !important;
+            }
+            
+            .profile-img {
+                width: 320px !important;
+                height: 320px !important;
+                border-width: 10px !important;
+            }
+            
+            .hero-image {
+                width: 320px !important;
+                height: 320px !important;
+            }
+            
+            .skills-grid {
+                max-width: 1200px !important;
+                gap: 50px !important;
+            }
+            
+            .skill-category {
+                padding: 35px !important;
             }
         }
         

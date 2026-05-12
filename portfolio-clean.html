@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, max-age=0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no">
+    <title>Portfolio - Rokhaya Diop | Digital Lead & Développeuse FullStack</title>
+    <meta name="description" content="Portfolio de Rokhaya Diop, Digital Lead & Développeuse FullStack avec 3+ ans d'expérience en Java/Angular, WordPress, DevSecOps. Spécialisée en branding et stratégie digitale.">
+    <meta name="keywords" content="Rokhaya Diop, Digital Lead, Développeuse FullStack, Java, Angular, WordPress, DevSecOps, Branding, Stratégie Digitale">
+    <meta name="author" content="Rokhaya Diop">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph pour les réseaux sociaux -->
+    <meta property="og:title" content="Portfolio - Rokhaya Diop | Digital Lead & Développeuse FullStack">
+    <meta property="og:description" content="Digital Lead & Développeuse FullStack avec expertise en Java/Angular, WordPress et stratégie digitale.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Portfolio - Rokhaya Diop">
+    <meta name="twitter:description" content="Digital Lead & Développeuse FullStack spécialisée en stratégie digitale.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,">
+    
+    <link rel="stylesheet" href="portfolio-final.css?v=202405111700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* TOUS LES STYLES DIRECTEMENT POUR CONTOURNER LE CACHE */
+        
+        /* Grilles compétences - FORCÉES */
+        .skills-grid {
+            display: grid !important;
+            gap: 40px !important;
+            max-width: 1000px !important;
+            margin: 0 auto !important;
+        }
+        
+        /* Mobile - STYLES AMÉLIORÉS */
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr !important;
+                gap: 30px !important;
+                padding: 0 20px !important;
+            }
+            
+            .container {
+                padding: 15px !important;
+            }
+            
+            .hero {
+                padding: 40px 0 !important;
+            }
+            
+            .hero-content {
+                gap: 30px !important;
+            }
+            
+            .hero-text h1 {
+                font-size: 2rem !important;
+                margin-bottom: 8px !important;
+            }
+            
+            .hero-text h2 {
+                font-size: 1.2rem !important;
+                margin-bottom: 15px !important;
+            }
+            
+            .hero-description {
+                font-size: 0.95rem !important;
+                line-height: 1.6 !important;
+            }
+            
+            /* PHOTO MOBILE - SANS CERCLE */
+            .profile-img {
+                width: 150px !important;
+                height: 150px !important;
+                max-width: 150px !important;
+                max-height: 150px !important;
+                aspect-ratio: 1/1 !important;
+                border-radius: 50% !important;
+                overflow: hidden !important;
+                border: none !important;
+                box-shadow: none !important;
+                position: relative !important;
+                transition: all 0.4s ease !important;
+                background: transparent !important;
+                z-index: 1000 !important;
+                flex-shrink: 0 !important;
+            }
+            
+            .profile-img img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                border-radius: 50% !important;
+                display: block !important;
+            }
+            
+            .hero-image {
+                width: 150px !important;
+                height: 150px !important;
+                max-width: 150px !important;
+                max-height: 150px !important;
+                aspect-ratio: 1/1 !important;
+                margin: 0 auto !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                background: transparent !important;
+                flex-shrink: 0 !important;
+            }
+            
+            .section-title {
+                font-size: 2rem !important;
+                margin-bottom: 40px !important;
+            }
+            
+            .skill-category {
+                padding: 25px !important;
+                border-radius: 15px !important;
+            }
+            
+            .skill-header h3 {
+                font-size: 1.2rem !important;
+                margin-bottom: 15px !important;
+            }
+            
+            .skill-item span {
+                min-width: 100px !important;
+                font-size: 0.9rem !important;
+            }
+            
+            /* SUPPRESSION COMPLÈTE DU FOND BLANC */
+            .profile-img::before {
+                display: none !important;
+            }
+            .hero-image::before {
+                display: none !important;
+            }
+            .hero-image::after {
+                display: none !important;
+            }
+            .profile-img::after {
+                display: none !important;
+            }
+        }
+        
+        /* Petits mobiles */
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 1.8rem !important;
+            }
+            
+            .hero-text h2 {
+                font-size: 1.1rem !important;
+            }
+            
+            .hero-description {
+                font-size: 0.9rem !important;
+            }
+            
+            .profile-img {
+                width: 130px !important;
+                height: 130px !important;
+                max-width: 130px !important;
+                max-height: 130px !important;
+                aspect-ratio: 1/1 !important;
+                border: none !important;
+                box-shadow: none !important;
+                flex-shrink: 0 !important;
+            }
+            
+            .hero-image {
+                width: 130px !important;
+                height: 130px !important;
+                max-width: 130px !important;
+                max-height: 130px !important;
+                aspect-ratio: 1/1 !important;
+                flex-shrink: 0 !important;
+            }
+            
+            .section-title {
+                font-size: 1.8rem !important;
+            }
+            
+            .skill-category {
+                padding: 20px !important;
+            }
+            
+            .skill-item span {
+                min-width: 90px !important;
+                font-size: 0.85rem !important;
+            }
+            
+            .skills-grid {
+                gap: 25px !important;
+                padding: 0 15px !important;
+            }
+        }
+        
+        /* iPhone XR - STYLES SPÉCIFIQUES */
+        @media only screen 
+        and (device-width: 414px) 
+        and (device-height: 896px) 
+        and (-webkit-device-pixel-ratio: 2) {
+            .profile-img {
+                width: 160px !important;
+                height: 160px !important;
+                max-width: 160px !important;
+                max-height: 160px !important;
+                aspect-ratio: 1/1 !important;
+                border: none !important;
+                box-shadow: none !important;
+                flex-shrink: 0 !important;
+            }
+            
+            .hero-image {
+                width: 160px !important;
+                height: 160px !important;
+                max-width: 160px !important;
+                max-height: 160px !important;
+                aspect-ratio: 1/1 !important;
+                flex-shrink: 0 !important;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.2rem !important;
+            }
+            
+            .hero-text h2 {
+                font-size: 1.3rem !important;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr !important;
+                gap: 25px !important;
+                padding: 0 20px !important;
+            }
+        }
+        
+        /* Tablette - STYLES SPÉCIFIQUES */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .container {
+                padding: 25px !important;
+            }
+            
+            .hero {
+                padding: 50px 0 !important;
+            }
+            
+            .hero-content {
+                gap: 50px !important;
+            }
+            
+            .profile-img {
+                width: 280px !important;
+                height: 280px !important;
+                max-width: 280px !important;
+                max-height: 280px !important;
+                aspect-ratio: 1/1 !important;
+                border: none !important;
+                box-shadow: none !important;
+                flex-shrink: 0 !important;
+            }
+            
+            .hero-image {
+                width: 280px !important;
+                height: 280px !important;
+                max-width: 280px !important;
+                max-height: 280px !important;
+                aspect-ratio: 1/1 !important;
+                flex-shrink: 0 !important;
+            }
+            
+            .skills-grid {
+                gap: 35px !important;
+                max-width: 900px !important;
+            }
+            
+            .skill-category {
+                padding: 28px !important;
+            }
+        }
+        
+        /* Grand écran - STYLES SPÉCIFIQUES */
+        @media (min-width: 1400px) {
+            .container {
+                max-width: 1400px !important;
+                padding: 30px !important;
+            }
+            
+            .hero {
+                padding: 80px 0 !important;
+            }
+            
+            .profile-img {
+                width: 320px !important;
+                height: 320px !important;
+                max-width: 320px !important;
+                max-height: 320px !important;
+                aspect-ratio: 1/1 !important;
+                border: none !important;
+                box-shadow: none !important;
+                flex-shrink: 0 !important;
+            }
+            
+            .hero-image {
+                width: 320px !important;
+                height: 320px !important;
+                max-width: 320px !important;
+                max-height: 320px !important;
+                aspect-ratio: 1/1 !important;
+                flex-shrink: 0 !important;
+            }
+            
+            .skills-grid {
+                max-width: 1200px !important;
+                gap: 50px !important;
+            }
+            
+            .skill-category {
+                padding: 35px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-logo">
+                <a href="#accueil" class="logo-link">RD</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="#competences" class="nav-link">Compétences</a></li>
+                <li><a href="#projets" class="nav-link">Projets</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Bonjour, je suis <span class="highlight">Rokhaya Diop</span></h1>
+                <h2>Digital Lead & Développeuse FullStack</h2>
+                <p class="hero-description">
+                    Développeuse FullStack et stratège digitale avec plus de 3 ans d'expérience en développement web (Java/Angular, WordPress). Spécialisée en direction créative visuelle, branding, storytelling et architecture DevSecOps. Passionnée par l'authenticité et la performance digitale.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Me Contacter</a>
+                    <a href="#projets" class="btn btn-secondary">Voir mes Projets</a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://linkedin.com/in/rokhaya-diop-280859179" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="mailto:diop98018@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-img">
+                    <img src="ma photo R.jpg" alt="Photo de profil">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="competences" class="section">
+        <div class="container">
+            <h2 class="section-title">Compétences Techniques</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-tools skill-icon"></i>
+                        <h3>IDE et Framework</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span>IntelliJ IDEA</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>VS Code</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="98"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Code::Blocks</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>NetBeans</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Eclipse</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-code skill-icon"></i>
+                        <h3>Programmation</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span>Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>HTML5</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>SQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script>
+        // Forcer les grilles correctes et contourner tous les problèmes de cache
+        document.addEventListener('DOMContentLoaded', function() {
+            const skillsGrid = document.querySelector('.skills-grid');
+            const profileImg = document.querySelector('.profile-img');
+            const heroImage = document.querySelector('.hero-image');
+            
+            // Forcer la grille 1 colonne sur mobile
+            if (window.innerWidth <= 768) {
+                if (skillsGrid) {
+                    skillsGrid.style.gridTemplateColumns = '1fr';
+                    skillsGrid.style.gap = '30px';
+                    skillsGrid.style.padding = '0 20px';
+                }
+                
+                // Forcer la taille de la photo mobile
+                if (profileImg) {
+                    profileImg.style.width = '150px';
+                    profileImg.style.height = '150px';
+                    profileImg.style.border = 'none';
+                    profileImg.style.boxShadow = 'none';
+                }
+                
+                if (heroImage) {
+                    heroImage.style.width = '150px';
+                    heroImage.style.height = '150px';
+                }
+            }
+            
+            // Forcer la grille 1 colonne sur petits mobiles
+            if (window.innerWidth <= 480) {
+                if (profileImg) {
+                    profileImg.style.width = '130px';
+                    profileImg.style.height = '130px';
+                    profileImg.style.border = 'none';
+                    profileImg.style.boxShadow = 'none';
+                }
+                
+                if (heroImage) {
+                    heroImage.style.width = '130px';
+                    heroImage.style.height = '130px';
+                }
+            }
+            
+            // iPhone XR spécifique
+            if (window.innerWidth === 414 && window.innerHeight === 896) {
+                if (profileImg) {
+                    profileImg.style.width = '160px';
+                    profileImg.style.height = '160px';
+                    profileImg.style.border = 'none';
+                    profileImg.style.boxShadow = 'none';
+                }
+                
+                if (heroImage) {
+                    heroImage.style.width = '160px';
+                    heroImage.style.height = '160px';
+                }
+            }
+        });
+        
+        // Forcer au redimensionnement
+        window.addEventListener('resize', function() {
+            const skillsGrid = document.querySelector('.skills-grid');
+            const profileImg = document.querySelector('.profile-img');
+            const heroImage = document.querySelector('.hero-image');
+            
+            if (window.innerWidth <= 768) {
+                if (skillsGrid) {
+                    skillsGrid.style.gridTemplateColumns = '1fr';
+                }
+                
+                if (profileImg) {
+                    profileImg.style.width = '150px';
+                    profileImg.style.height = '150px';
+                    profileImg.style.border = 'none';
+                    profileImg.style.boxShadow = 'none';
+                }
+            } else {
+                if (skillsGrid) {
+                    skillsGrid.style.gridTemplateColumns = 'repeat(2, 1fr)';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
